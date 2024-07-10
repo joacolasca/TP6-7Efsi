@@ -1,5 +1,5 @@
-import boton from '../Boton';
-import cita from "./cita.module.css";
+import Boton from '../Boton';
+import styles from './cita.module.css';
 
 const Cita = ({ mascota, dueño, fecha, hora, sintomas, citas, setCitas, objCita }) => {
     const eliminarCita = () => {
@@ -14,13 +14,13 @@ const Cita = ({ mascota, dueño, fecha, hora, sintomas, citas, setCitas, objCita
     };
 
     return (
-        <div className='cita'>
+        <div className={styles.cita}>
             <p>Mascota: <span>{mascota}</span></p>
             <p>Dueño: <span>{dueño}</span></p>
             <p>Fecha: <span>{fecha}</span></p>
             <p>Hora: <span>{hora}</span></p>
             <p>Síntomas: <span>{sintomas}</span></p>
-            <Boton deleteCita = {eliminarCita} className="button elimnar u-full-width" titulo="Eliminar ×" />
+            <Boton deleteCita={eliminarCita} className={`${styles.buttonEliminar} button u-full-width`} titulo="Eliminar ×" />
         </div>
     );
 };

@@ -1,3 +1,5 @@
+/* styles/global.css */
+
 .App {
   text-align: center;
 }
@@ -36,9 +38,6 @@
     transform: rotate(360deg);
   }
 }
-
-
-/*  */
 
 html {
   min-height: 100%;

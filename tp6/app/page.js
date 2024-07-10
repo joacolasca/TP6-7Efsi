@@ -13,21 +13,8 @@ export default function Home() {
   const [citas, setCitas] = useState([]);
     return(
         <>
-          <Titulo texto="ADMINISTRADOR DE PACIENTES" />
-          <div className="container">
-          <div className="row">
-                <div className="one-half column">
-                    <Subtitulo texto = "CREAR MI CITA"/>
-                    <FormSubmit citas = { citas } setCitas = {setCitas} />
-                </div>
-                <div className = "one-half column">
-                    <Subtitulo texto = "ADMINISTRA TUS CITAS"/>
-                    {citas.map((cita, index) => {
-                      return <div> <Cita mascota= {cita.nombreMascota} dueño={cita.nombreDueño} fecha={cita.fecha} hora={cita.hora} sintomas= {cita.sintomas} citas ={citas} setCitas = {setCitas} objCita = {cita}/></div>
-                    })}
-                </div>
-                </div>
-                </div>
+          <Titulo texto="BIENVENIDOS, SAQUE SU CITA" />
+    
         </>
     );
 }

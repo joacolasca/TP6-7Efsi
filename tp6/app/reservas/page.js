@@ -10,7 +10,7 @@ export default function reservas(){
         <FormSubmit citas = { citas } setCitas = {setCitas} />
         {citas.map((cita, index) => {
                       return <div> <Cita mascota= {cita.nombreMascota} dueño={cita.nombreDueño} fecha={cita.fecha} hora={cita.hora} sintomas= {cita.sintomas} citas ={citas} setCitas = {setCitas} objCita = {cita}/></div>
-                    })}
+        }   )   }
     </>);
   
 

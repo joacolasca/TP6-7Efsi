@@ -1,6 +1,6 @@
 import Formulario from '../Formulario';
 import Boton from '../Boton';
-import { useState } from 'react';
+import styles from './formSubmit.module.css'; // Importa el CSS modular
 
 const FormSubmit = (props) => {
   const agregarCita = (e) => {
@@ -20,13 +20,13 @@ const FormSubmit = (props) => {
   };
 
   return (
-    <form onSubmit={agregarCita}>
-      <Formulario nombre="NombreMascota" tipo="text" />
-      <Formulario nombre="NombreDueño" tipo="text" />
-      <Formulario nombre="Fecha" tipo="date" />
-      <Formulario nombre="Hora" tipo="time" />
-      <Formulario nombre="Sintomas" tipo="textarea" placeholder="" />
-      <Boton className="u-full-width button-primary" titulo="AGREGAR CITA" tipo="submit" />
+    <form onSubmit={agregarCita} className={styles.form}>
+      <Formulario nombre="NombreMascota" tipo="text" className={styles.input} />
+      <Formulario nombre="NombreDueño" tipo="text" className={styles.input} />
+      <Formulario nombre="Fecha" tipo="date" className={styles.input} />
+      <Formulario nombre="Hora" tipo="time" className={styles.input} />
+      <Formulario nombre="Sintomas" tipo="textarea" placeholder="" className={styles.textarea} />
+      <Boton className={styles.button} titulo="AGREGAR CITA" tipo="submit" />
     </form>
   );
 };

@@ -228,3 +228,41 @@
     transform: rotate(0deg);
   }
 }
+/* page.module.css */
+
+.linkBonito {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #00b4d8; /* Cambia este color según prefieras */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.linkBonito:hover {
+  background-color: #0096c7; 
+}
+
+
+.tituloConLink {
+  display: flex;
+  align-items: center; 
+}
+
+.linkBonito {
+  display: inline-block;
+  padding: 5px 10px; 
+  background-color: #00b4d8; 
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-left: 10px; 
+  transition: background-color 0.3s ease;
+}
+
+.linkBonito:hover {
+  background-color: #0096c7; 
+}

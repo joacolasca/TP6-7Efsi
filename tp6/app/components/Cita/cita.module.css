@@ -1,11 +1,13 @@
-/* cita.module.css */
-
 .cita {
   padding: 2rem;
   background: white;
   border-bottom: 1px solid #e1e1e1;
   color: black;
   margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agrega una sombra para darle profundidad */
+  max-width: 400px; /* Limita el ancho de la tarjeta */
+  margin-left: auto; /* Centra la tarjeta horizontalmente */
+  margin-right: auto;
 }
 
 .cita p {
@@ -27,9 +29,20 @@
   border-bottom-right-radius: 1rem;
 }
 
-.buttonEliminar,
-.buttonEliminar:hover {
+.buttonEliminar {
   background-color: #c10059;
   color: white;
   margin-top: 2rem;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  width: 100%; /* Asegura que el botón ocupe todo el ancho */
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.buttonEliminar:hover {
+  background-color: #a8004d; /* Cambia el color cuando el cursor está sobre el botón */
 }

@@ -1,12 +1,21 @@
+import { useEffect } from 'react';
 import Formulario from '../Formulario';
 import Boton from '../Boton';
-import styles from './formSubmit.module.css'; // Importa el CSS modular
+import styles from './formSubmit.module.css'; 
 
 const FormSubmit = (props) => {
+
+  useEffect(() => {
+    const citasGuardadas = localStorage.getItem('citas');
+    if (citasGuardadas) {
+      props.setCitas(JSON.parse(citasGuardadas));
+    }
+  }, []);
+
   const agregarCita = (e) => {
     e.preventDefault();
     if (window.confirm('¿Estás seguro de que deseas crear esta cita?')) {
-      props.setCitas([
+      const nuevasCitas = [
         ...props.citas,
         {
           nombreMascota: e.target.NombreMascota.value,
@@ -15,7 +24,10 @@ const FormSubmit = (props) => {
           hora: e.target.Hora.value,
           sintomas: e.target.Sintomas.value,
         },
-      ]);
+      ];
+
+      props.setCitas(nuevasCitas);
+      localStorage.setItem('citas', JSON.stringify(nuevasCitas));
     }
   };
 
